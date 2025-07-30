@@ -8,6 +8,8 @@ app.use(cors())
 
 // http://localhost:3000/
 app.get('/', (req, res) => {
+    // console.log('maybe?')
+    
     // res.send('Hello Express!')
     // res.json({message: 'Hello Express with JSON!'})
 
