@@ -10,3 +10,4 @@ fetch('http://localhost:3000')
             <h3>${result.message}</h3>
         `
     })
+    .catch(error => console.log('Error:', error))
