@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     // res.send('message')
     // res.json({message: 'some content'})
 
-    res.send({message: 'different message'})
+    res.send({message: 'Hello world!'})
 })
 
 app.listen(port, () => {
