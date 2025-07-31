@@ -23,3 +23,18 @@ axios.get('http://localhost:3000')
         `
     })
     .catch(error => console.log(error))
+
+// ========================================================
+// EXAMPLE - ABOUT CONTENT
+// ========================================================
+
+fetch('http://localhost:3000/about')
+    .then(response => response.json())
+    .then(result => {
+        // console.log(result)
+        document.querySelector('.example-about .content').innerHTML = `
+            <h3>${result.title}</h3>
+            <p>${result.content}</p>
+        `
+    }).catch(error => console.error('Error:', error))
+
