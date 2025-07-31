@@ -6,7 +6,7 @@ const port = 3000
 
 app.use(cors())
 
-// http://localhost:3000/
+// GET http://localhost:3000/
 app.get('/', (req, res) => {
     // console.log('maybe?')
     
@@ -20,6 +20,16 @@ app.get('/', (req, res) => {
     // res.json({message: 'some content'})
 
     res.send({message: 'Hello world!'})
+})
+
+// GET http://localhost:3000/about
+app.get('/about', (req, res) => {
+    // res.send('hello from about route')
+    let data = {
+        title: 'About us',
+        content: 'We are the best!'
+    }
+    res.send(data)
 })
 
 app.listen(port, () => {
