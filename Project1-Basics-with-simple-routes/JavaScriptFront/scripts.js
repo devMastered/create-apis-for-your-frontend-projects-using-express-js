@@ -28,13 +28,21 @@ axios.get('http://localhost:3000')
 // EXAMPLE - ABOUT CONTENT
 // ========================================================
 
-fetch('http://localhost:3000/about')
-    .then(response => response.json())
+// fetch('http://localhost:3000/about')
+//     .then(response => response.json())
+//     .then(result => {
+//         // console.log(result)
+//         document.querySelector('.example-about .content').innerHTML = `
+//             <h3>${result.title}</h3>
+//             <p>${result.content}</p>
+//         `
+//     }).catch(error => console.error('Error:', error))
+
+axios.get('http://localhost:3000/about')
     .then(result => {
         // console.log(result)
         document.querySelector('.example-about .content').innerHTML = `
-            <h3>${result.title}</h3>
-            <p>${result.content}</p>
+            <h3>${result.data.title}</h3>
+            <p>${result.data.content}</p>
         `
     }).catch(error => console.error('Error:', error))
-
