@@ -20,11 +20,17 @@ function App() {
                 setMessage(data.data.message)
             })
         
-        fetch('http://localhost:3000/about')
-            .then(response => response.json())
+        // fetch('http://localhost:3000/about')
+        //     .then(response => response.json())
+        //     .then(result => {
+        //         // console.log(result)
+        //         setAboutUs(result)
+        //     })
+
+        axios.get('http://localhost:3000/about')
             .then(result => {
                 // console.log(result)
-                setAboutUs(result)
+                setAboutUs(result.data)
             })
     }, [])
 
