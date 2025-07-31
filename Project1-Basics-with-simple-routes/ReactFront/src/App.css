@@ -1,42 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+    background: #f8f8f8;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.block {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    margin: 32px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.card {
-  padding: 2em;
+.block.title {
+    border-left: 8px solid #007bff;
+    background: rgb(51, 51, 51);
+    color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.block .block-title {
+    background: rgb(51, 51, 51);
+    color: white;
+    padding: 8px 32px;
+    font-size: 12px;
+}
+
+.block .content {
+    padding: 16px 32px;
 }
