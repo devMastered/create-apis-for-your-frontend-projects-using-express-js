@@ -49,7 +49,7 @@ function App() {
                 </div>
             </div>
 
-             <div className="block">
+            <div className="block">
                 <p className="block-title">GET /about</p>
                 <div className="content">
                     <h3>{aboutUs.title}</h3>
