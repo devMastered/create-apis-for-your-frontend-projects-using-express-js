@@ -27,3 +27,7 @@ GET http://localhost:3000/product
 ###
 
 GET http://localhost:3000/user/details
+
+###
+
+GET http://localhost:3000/blog/latest

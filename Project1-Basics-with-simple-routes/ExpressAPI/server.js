@@ -86,6 +86,16 @@ app.get('/user/details', (req, res) => {
     })
 })
 
+// GET http://localhost:3000/blog/latest
+app.get('/blog/latest', (req, res) => {
+    let posts = [
+        { title: 'Learn HTML and CSS', author: "Ieva Jakšaitytė", published: '2025-01-10', tags: ['html', 'css', 'frontend'] },
+        { title: 'How to learn Node.js', author: "Ieva Jakšaitytė", published: '2025-02-01', tags: ['node', 'javascript', 'backend'] },
+    ]
+    let latestPost = posts[posts.length - 1]
+    res.send(latestPost)
+})
+
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
 })
