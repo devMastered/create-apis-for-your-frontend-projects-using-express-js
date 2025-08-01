@@ -128,3 +128,29 @@ axios.get('http://localhost:3000/product')
             <p>Is in stock? - ${data.inStock ? 'Yes' : 'No'}</p>
         `
     })
+
+// ========================================================
+// EXAMPLE - USER DETAILS CONTENT
+// ========================================================
+
+// fetch('http://localhost:3000/user/details')
+//     .then(response => response.json())
+//     .then(result => {
+//         // console.log(result)
+//         document.querySelector('.example-user-details .content').innerHTML = `
+//             <h3>User "${result.username}" details</h3>
+//             <p>Age: ${result.age}</p>
+//             <p>Hobbies: ${result.hobbies.join(', ')}</p>
+//         `
+//     })
+
+axios.get('http://localhost:3000/user/details')
+    .then(result => {
+        let user = result.data
+        // console.log(result)
+        document.querySelector('.example-user-details .content').innerHTML = `
+            <h3>User "${user.username}" details</h3>
+            <p>Age: ${user.age}</p>
+            <p>Hobbies: ${user.hobbies.join(', ')}</p>
+        `
+    })

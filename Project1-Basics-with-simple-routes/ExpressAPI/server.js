@@ -77,6 +77,15 @@ app.get('/product', (req, res) => {
     })
 })
 
+// GET http://localhost:3000/user/details
+app.get('/user/details', (req, res) => {
+    res.send({
+        username: 'jane123',
+        age: 28,
+        hobbies: ['reading', 'cycling', 'gaming']
+    })
+})
+
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
 })
