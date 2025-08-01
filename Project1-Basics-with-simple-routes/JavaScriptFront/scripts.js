@@ -154,3 +154,33 @@ axios.get('http://localhost:3000/user/details')
             <p>Hobbies: ${user.hobbies.join(', ')}</p>
         `
     })
+
+// ========================================================
+// EXAMPLE - LATEST BLOG POST CONTENT
+// ========================================================
+
+// fetch('http://localhost:3000/blog/latest')
+//     .then(response => response.json())
+//     .then(blogPost => {
+//         // console.log(blogPost)
+//         document.querySelector('.example-blog-latest .content').innerHTML = `
+//             <h3>Latest Blog Post</h3>
+//             <p><strong>Title:</strong> ${blogPost.title}</p>
+//             <p><strong>Author:</strong> ${blogPost.author}</p>
+//             <p><strong>Published:</strong> ${blogPost.published}</p>
+//             <p><strong>Tags:</strong> ${blogPost.tags.join(', ')}</p>
+//         `
+//     })
+
+axios.get('http://localhost:3000/blog/latest')
+    .then(result => {
+        let blogPost = result.data
+        // console.log(blogPost)
+        document.querySelector('.example-blog-latest .content').innerHTML = `
+            <h3>Latest Blog Post</h3>
+            <p><strong>Title:</strong> ${blogPost.title}</p>
+            <p><strong>Author:</strong> ${blogPost.author}</p>
+            <p><strong>Published:</strong> ${blogPost.published}</p>
+            <p><strong>Tags:</strong> ${blogPost.tags.join(', ')}</p>
+        `
+    })
