@@ -46,3 +46,23 @@ axios.get('http://localhost:3000/about')
             <p>${result.data.content}</p>
         `
     }).catch(error => console.error('Error:', error))
+
+// ========================================================
+// EXAMPLE - CONTACT US CONTENT
+// ========================================================
+
+// let data = null
+
+fetch('http://localhost:3000/contact')
+    .then(response => response.json())
+    .then(result => {
+        // console.log('console in then', result)
+        // data = result
+        document.querySelector('.example-contact .content').innerHTML = `
+            <h3>${result.title}</h3>
+            <p>Phone: ${result.phone}</p>
+            <p>Email: ${result.email}</p>
+        `
+    })
+
+// console.log('console after fetch', data)
