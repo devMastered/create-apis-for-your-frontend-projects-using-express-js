@@ -81,14 +81,25 @@ axios.get('http://localhost:3000/contact')
 // EXAMPLE - STORE DETAILS CONTENT
 // ========================================================
 
-fetch('http://localhost:3000/store/details')
-    .then(response => response.json())
+// fetch('http://localhost:3000/store/details')
+//     .then(response => response.json())
+//     .then(result => {
+//         // console.log(result)
+//         document.querySelector('.example-store-details .content').innerHTML = `
+//             <h3>${result.name}</h3>
+//             <p>Location: ${result.location}</p>
+//             <p>Opening hours: ${result.openingHours}</p>
+//         `
+//     })
+
+axios.get('http://localhost:3000/store/details')
     .then(result => {
         // console.log(result)
+        let store = result.data;
+        // console.log(store)
         document.querySelector('.example-store-details .content').innerHTML = `
-            <h3>${result.name}</h3>
-            <p>Location: ${result.location}</p>
-            <p>Opening hours: ${result.openingHours}</p>
+            <h3>${store.name}</h3>
+            <p>Location: ${store.location}</p>
+            <p>Opening hours: ${store.openingHours}</p>
         `
     })
-
