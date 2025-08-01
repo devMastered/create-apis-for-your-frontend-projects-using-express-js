@@ -32,6 +32,20 @@ app.get('/about', (req, res) => {
     res.send(data)
 })
 
+// GET http://localhost:3000/contact
+app.get('/contact', (req, res) => {
+    // res.send('ok')
+    let title = 'Contact us'
+    let phone = '+370 600 00000'
+    let email = 'info@devmastered.com'
+    // res.send({
+    //     title: title,
+    //     phone: phone,
+    //     email: email,
+    // })
+    res.send({title, phone, email})
+})
+
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
 })
