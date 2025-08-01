@@ -67,6 +67,16 @@ app.get('/store/details', (req, res) => {
     return res.send(storeDetails)
 })
 
+// GET http://localhost:3000/product
+app.get('/product', (req, res) => {
+    res.send({
+        id: 101,
+        name: 'Wireless mouse',
+        price: 25.99,
+        inStock: true
+    })
+})
+
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
 })

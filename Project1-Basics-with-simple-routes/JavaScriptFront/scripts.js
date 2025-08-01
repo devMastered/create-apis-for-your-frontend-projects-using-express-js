@@ -103,3 +103,28 @@ axios.get('http://localhost:3000/store/details')
             <p>Opening hours: ${store.openingHours}</p>
         `
     })
+
+// ========================================================
+// EXAMPLE - PRODUCT CONTENT
+// ========================================================
+
+// fetch('http://localhost:3000/product')
+//     .then(response => response.json())
+//     .then(result => {
+//         // console.log(result)
+//         document.querySelector('.example-product .content').innerHTML = `
+//             <h3>Product name: ${result.name} (id: ${result.id})</h3>
+//             <p>Price: ${result.price} EUR</p>
+//             <p>Is in stock? - ${result.inStock ? 'Yes' : 'No'}</p>
+//         `
+//     })
+
+axios.get('http://localhost:3000/product')
+    .then(({data}) => {
+        // console.log(data)
+        document.querySelector('.example-product .content').innerHTML = `
+            <h3>Product name: ${data.name} (id: ${data.id})</h3>
+            <p>Price: ${data.price} EUR</p>
+            <p>Is in stock? - ${data.inStock ? 'Yes' : 'No'}</p>
+        `
+    })
