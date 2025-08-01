@@ -9,6 +9,13 @@ function App() {
         content: ''
     })
 
+    const [isLoading, setIsLoading] = useState(true)
+    const [storeDetails, setStoreDetails] = useState({
+        name: '',
+        location: '',
+        openingHours: ''
+    })
+
     useEffect(() => {
         // fetch('http://localhost:3000')
         //     .then(response => response.json())
@@ -32,6 +39,13 @@ function App() {
                 // console.log(result)
                 setAboutUs(result.data)
             })
+
+        axios.get('http://localhost:3000/store/details')
+            .then(result => {
+                // console.log(result)
+                setStoreDetails(result.data)
+                setIsLoading(false)
+            })
     }, [])
 
     return (
@@ -54,6 +68,23 @@ function App() {
                 <div className="content">
                     <h3>{aboutUs.title}</h3>
                     <p>{aboutUs.content}</p>
+                </div>
+            </div>
+
+            <div className="block">
+                <p className="block-title">GET /store/details</p>
+                <div className="content">
+                    {
+                        isLoading && <p>Data is loading...</p>
+                    }
+                    {
+                        !isLoading &&
+                        <>
+                            <h3>{storeDetails.name}</h3>
+                            <p>Location: {storeDetails.location}</p>
+                            <p>Opening hours: {storeDetails.openingHours}</p>
+                        </>
+                    }
                 </div>
             </div>
         </>
