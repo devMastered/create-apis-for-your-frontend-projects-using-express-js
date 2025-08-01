@@ -46,6 +46,14 @@ app.get('/contact', (req, res) => {
     res.send({title, phone, email})
 })
 
+app.get('/unique', (req, res) => {
+    res.send('first')
+})
+
+app.get('/unique', (req, res) => {
+    res.send('second')
+})
+
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
 })
