@@ -53,16 +53,26 @@ axios.get('http://localhost:3000/about')
 
 // let data = null
 
-fetch('http://localhost:3000/contact')
-    .then(response => response.json())
-    .then(result => {
-        // console.log('console in then', result)
-        // data = result
-        document.querySelector('.example-contact .content').innerHTML = `
-            <h3>${result.title}</h3>
-            <p>Phone: ${result.phone}</p>
-            <p>Email: ${result.email}</p>
-        `
-    })
+// fetch('http://localhost:3000/contact')
+//     .then(response => response.json())
+//     .then(result => {
+//         // console.log('console in then', result)
+//         // data = result
+//         document.querySelector('.example-contact .content').innerHTML = `
+//             <h3>${result.title}</h3>
+//             <p>Phone: ${result.phone}</p>
+//             <p>Email: ${result.email}</p>
+//         `
+//     })
 
 // console.log('console after fetch', data)
+
+axios.get('http://localhost:3000/contact')
+    .then(result => {
+        // console.log(result.data)
+        document.querySelector('.example-contact .content').innerHTML = `
+            <h3>${result.data.title}</h3>
+            <p>Phone: ${result.data.phone}</p>
+            <p>Email: ${result.data.email}</p>
+        `
+    })
