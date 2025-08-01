@@ -46,12 +46,25 @@ app.get('/contact', (req, res) => {
     res.send({title, phone, email})
 })
 
+// GET http://localhost:3000/unique
 app.get('/unique', (req, res) => {
     res.send('first')
 })
 
+// GET http://localhost:3000/unique
 app.get('/unique', (req, res) => {
     res.send('second')
+})
+
+// GET http://localhost:3000/store/details
+app.get('/store/details', (req, res) => {
+    // res.send('store details')
+    let storeDetails = {
+        name: 'Super Store',
+        location: 'Main Street 123',
+        openingHours: '9 AM - 9 PM'
+    }
+    return res.send(storeDetails)
 })
 
 app.listen(port, () => {

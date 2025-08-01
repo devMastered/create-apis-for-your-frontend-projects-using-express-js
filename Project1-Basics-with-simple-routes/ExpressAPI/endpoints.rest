@@ -11,3 +11,11 @@ GET http://localhost:3000/contact
 ###
 
 GET http://localhost:3000/unique
+
+###
+
+GET http://localhost:3000/store/details
+
+### Incorect way of reaching store details:
+
+GET http://localhost:3000/store
