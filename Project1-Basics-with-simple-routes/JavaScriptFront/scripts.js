@@ -76,3 +76,19 @@ axios.get('http://localhost:3000/contact')
             <p>Email: ${result.data.email}</p>
         `
     })
+
+// ========================================================
+// EXAMPLE - STORE DETAILS CONTENT
+// ========================================================
+
+fetch('http://localhost:3000/store/details')
+    .then(response => response.json())
+    .then(result => {
+        // console.log(result)
+        document.querySelector('.example-store-details .content').innerHTML = `
+            <h3>${result.name}</h3>
+            <p>Location: ${result.location}</p>
+            <p>Opening hours: ${result.openingHours}</p>
+        `
+    })
+
