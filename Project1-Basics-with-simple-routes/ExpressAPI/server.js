@@ -118,6 +118,20 @@ app.get('/pet', (req, res) => {
     res.send({type, name})
 })
 
+// Task 2:
+// Create route '/car' and return {brand: 'Toyota', model: 'Corolla', year: 2020}
+
+app.get('/car', (req, res) => {
+    // res.send({brand: 'Toyota', model: 'Corolla', year: 2020})
+
+    let carDetails = {
+        brand: 'Toyota',
+        model: 'Corolla',
+        year: 2020
+    }
+    res.send(carDetails)
+})
+
 
 
 // =====================================================

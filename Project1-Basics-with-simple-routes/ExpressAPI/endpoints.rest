@@ -35,3 +35,7 @@ GET http://localhost:3000/blog/latest
 ###
 
 GET http://localhost:3000/pet
+
+###
+
+GET http://localhost:3000/car
