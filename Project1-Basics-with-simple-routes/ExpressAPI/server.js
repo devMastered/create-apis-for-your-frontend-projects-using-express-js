@@ -156,6 +156,21 @@ app.get('/movie', (req, res) => {
     res.send(movie)
 })
 
+// Task 5:
+// Create route '/student'
+// and return {name: 'Austeja', grade: 10, subjects: ['Math', 'Biology']}
+
+app.get('/student', (req, res) => {
+    let studentDetails = {
+        name: 'Austeja',
+        grade: 10,
+        subjects: ['Math', 'Biology']
+    }
+    res.send(studentDetails)
+})
+
+
+
 
 // =====================================================
 
