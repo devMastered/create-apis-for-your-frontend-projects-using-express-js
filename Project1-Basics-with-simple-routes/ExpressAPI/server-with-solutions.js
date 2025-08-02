@@ -107,35 +107,80 @@ app.get('/blog/latest', (req, res) => {
 // Task 1:
 // Create route '/pet' and return {type: 'Dog', name: 'Rex'}
 
+app.get('/pet', (req, res) => {
+    // res.send({type: 'Dog', name: 'Rex'})
 
+    // let pet = {type: 'Dog', name: 'Rex'}
+    // res.send(pet)
+
+    let type = 'Dog'
+    let name = 'Rex'
+    res.send({type, name})
+})
 
 // Task 2:
 // Create route '/car' and return {brand: 'Toyota', model: 'Corolla', year: 2020}
 
+app.get('/car', (req, res) => {
+    // res.send({brand: 'Toyota', model: 'Corolla', year: 2020})
 
+    let carDetails = {
+        brand: 'Toyota',
+        model: 'Corolla',
+        year: 2020
+    }
+    res.send(carDetails)
+})
 
 // Task 3:
 // Create route '/book' and return {title: '1984', author: 'George Orwell'}
 
-
+app.get('/book', (req, res) => {
+    let book = {
+        title: '1984',
+        author: 'George Orwell'
+    }
+    res.send(book)
+})
 
 // Task 4:
 // Create route '/movie' and
 // return {title: 'Inception', director: 'Christopher Nolan', year: 2010}
 
-
+app.get('/movie', (req, res) => {
+    let movie = {
+        title: 'Inception',
+        director: 'Christopher Nolan',
+        year: 2010
+    }
+    res.send(movie)
+})
 
 // Task 5:
 // Create route '/student'
 // and return {name: 'Austeja', grade: 10, subjects: ['Math', 'Biology']}
 
-
+app.get('/student', (req, res) => {
+    let studentDetails = {
+        name: 'Austeja',
+        grade: 10,
+        subjects: ['Math', 'Biology']
+    }
+    res.send(studentDetails)
+})
 
 // Task 6:
 // Create route '/city'
 // and return {name: 'Vilnius', population: 580000, country: 'Lithuania'}
 
-
+app.get('/city', (req, res) => {
+    let city = {
+        name: 'Vilnius',
+        population: 580000,
+        country: 'Lithuania'
+    }
+    res.send(city)
+})
 
 // =====================================================
 
