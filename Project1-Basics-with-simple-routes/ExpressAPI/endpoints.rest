@@ -39,3 +39,7 @@ GET http://localhost:3000/pet
 ###
 
 GET http://localhost:3000/car
+
+###
+
+GET http://localhost:3000/book

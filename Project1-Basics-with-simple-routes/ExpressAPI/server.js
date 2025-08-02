@@ -132,6 +132,16 @@ app.get('/car', (req, res) => {
     res.send(carDetails)
 })
 
+// Task 3:
+// Create route '/book' and return {title: '1984', author: 'George Orwell'}
+
+app.get('/book', (req, res) => {
+    let book = {
+        title: '1984',
+        author: 'George Orwell'
+    }
+    res.send(book)
+})
 
 
 // =====================================================
