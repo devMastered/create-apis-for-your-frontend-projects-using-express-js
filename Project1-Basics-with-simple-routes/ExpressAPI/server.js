@@ -169,8 +169,18 @@ app.get('/student', (req, res) => {
     res.send(studentDetails)
 })
 
+// Task 6:
+// Create route '/city'
+// and return {name: 'Vilnius', population: 580000, country: 'Lithuania'}
 
-
+app.get('/city', (req, res) => {
+    let city = {
+        name: 'Vilnius',
+        population: 580000,
+        country: 'Lithuania'
+    }
+    res.send(city)
+})
 
 // =====================================================
 
