@@ -6,6 +6,10 @@ const port = 3000
 
 app.use(cors())
 
+// =====================================================
+// Examples of Simple Routes
+// =====================================================
+
 // GET http://localhost:3000/
 app.get('/', (req, res) => {
     // console.log('maybe?')
@@ -95,6 +99,18 @@ app.get('/blog/latest', (req, res) => {
     let latestPost = posts[posts.length - 1]
     res.send(latestPost)
 })
+
+// =====================================================
+// Tasks
+// =====================================================
+
+
+
+
+
+
+
+// =====================================================
 
 app.listen(port, () => {
     console.log(`App running on http://localhost:${port}`)
