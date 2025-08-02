@@ -104,9 +104,19 @@ app.get('/blog/latest', (req, res) => {
 // Tasks
 // =====================================================
 
+// Task 1:
+// Create route '/pet' and return {type: 'Dog', name: 'Rex'}
 
+app.get('/pet', (req, res) => {
+    // res.send({type: 'Dog', name: 'Rex'})
 
+    // let pet = {type: 'Dog', name: 'Rex'}
+    // res.send(pet)
 
+    let type = 'Dog'
+    let name = 'Rex'
+    res.send({type, name})
+})
 
 
 
