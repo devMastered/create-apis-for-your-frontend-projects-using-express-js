@@ -143,6 +143,19 @@ app.get('/book', (req, res) => {
     res.send(book)
 })
 
+// Task 4:
+// Create route '/movie' and
+// return {title: 'Inception', director: 'Christopher Nolan', year: 2010}
+
+app.get('/movie', (req, res) => {
+    let movie = {
+        title: 'Inception',
+        director: 'Christopher Nolan',
+        year: 2010
+    }
+    res.send(movie)
+})
+
 
 // =====================================================
 
