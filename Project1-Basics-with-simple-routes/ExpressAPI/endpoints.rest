@@ -6,6 +6,10 @@ GET http://localhost:3000/about
 
 ###
 
+GET https://devmastered-express.up.railway.app/about
+
+###
+
 GET http://localhost:3000/contact
 
 ###
