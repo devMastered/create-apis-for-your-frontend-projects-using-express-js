@@ -4,7 +4,13 @@ const cors = require('cors')
 const app = express()
 const port = 3000
 
-app.use(cors())
+app.use(cors({
+    origin: [
+        'http://127.0.0.1:5500',
+        'http://localhost:5167',
+        'https://my-app.netlify.com'
+    ]
+}))
 
 // =====================================================
 // Examples of Simple Routes
