@@ -23,7 +23,9 @@ app.get('/', (req, res) => {
     // res.send('message')
     // res.json({message: 'some content'})
 
-    res.send({message: 'Hello world!'})
+    // res.send({message: 'Hello world!'})
+
+    res.send({message: 'Hello world from Railway!'})
 })
 
 // GET http://localhost:3000/about
