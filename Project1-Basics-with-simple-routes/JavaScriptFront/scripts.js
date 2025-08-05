@@ -2,7 +2,7 @@
 // EXAMPLE - HOME PAGE CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000')
+// fetch('https://devmastered-express.up.railway.app')
 //     .then(response => {
 //         // console.log(response)
 //         return response.json()
@@ -15,7 +15,7 @@
 //     })
 //     .catch(error => console.log('Error:', error))
 
-axios.get('http://localhost:3000')
+axios.get('https://devmastered-express.up.railway.app')
     .then(result => {
         // console.log('AXIOS RESULT', result)
         document.querySelector('.example-home .content').innerHTML = `
@@ -28,7 +28,7 @@ axios.get('http://localhost:3000')
 // EXAMPLE - ABOUT CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000/about')
+// fetch('https://devmastered-express.up.railway.app/about')
 //     .then(response => response.json())
 //     .then(result => {
 //         // console.log(result)
@@ -38,7 +38,7 @@ axios.get('http://localhost:3000')
 //         `
 //     }).catch(error => console.error('Error:', error))
 
-axios.get('http://localhost:3000/about')
+axios.get('https://devmastered-express.up.railway.app/about')
     .then(result => {
         // console.log(result)
         document.querySelector('.example-about .content').innerHTML = `
@@ -53,7 +53,7 @@ axios.get('http://localhost:3000/about')
 
 // let data = null
 
-// fetch('http://localhost:3000/contact')
+// fetch('https://devmastered-express.up.railway.app/contact')
 //     .then(response => response.json())
 //     .then(result => {
 //         // console.log('console in then', result)
@@ -67,7 +67,7 @@ axios.get('http://localhost:3000/about')
 
 // console.log('console after fetch', data)
 
-axios.get('http://localhost:3000/contact')
+axios.get('https://devmastered-express.up.railway.app/contact')
     .then(result => {
         // console.log(result.data)
         document.querySelector('.example-contact .content').innerHTML = `
@@ -81,7 +81,7 @@ axios.get('http://localhost:3000/contact')
 // EXAMPLE - STORE DETAILS CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000/store/details')
+// fetch('https://devmastered-express.up.railway.app/store/details')
 //     .then(response => response.json())
 //     .then(result => {
 //         // console.log(result)
@@ -92,7 +92,7 @@ axios.get('http://localhost:3000/contact')
 //         `
 //     })
 
-axios.get('http://localhost:3000/store/details')
+axios.get('https://devmastered-express.up.railway.app/store/details')
     .then(result => {
         // console.log(result)
         let store = result.data;
@@ -108,7 +108,7 @@ axios.get('http://localhost:3000/store/details')
 // EXAMPLE - PRODUCT CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000/product')
+// fetch('https://devmastered-express.up.railway.app/product')
 //     .then(response => response.json())
 //     .then(result => {
 //         // console.log(result)
@@ -119,7 +119,7 @@ axios.get('http://localhost:3000/store/details')
 //         `
 //     })
 
-axios.get('http://localhost:3000/product')
+axios.get('https://devmastered-express.up.railway.app/product')
     .then(({data}) => {
         // console.log(data)
         document.querySelector('.example-product .content').innerHTML = `
@@ -133,7 +133,7 @@ axios.get('http://localhost:3000/product')
 // EXAMPLE - USER DETAILS CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000/user/details')
+// fetch('https://devmastered-express.up.railway.app/user/details')
 //     .then(response => response.json())
 //     .then(result => {
 //         // console.log(result)
@@ -144,7 +144,7 @@ axios.get('http://localhost:3000/product')
 //         `
 //     })
 
-axios.get('http://localhost:3000/user/details')
+axios.get('https://devmastered-express.up.railway.app/user/details')
     .then(result => {
         let user = result.data
         // console.log(result)
@@ -159,7 +159,7 @@ axios.get('http://localhost:3000/user/details')
 // EXAMPLE - LATEST BLOG POST CONTENT
 // ========================================================
 
-// fetch('http://localhost:3000/blog/latest')
+// fetch('https://devmastered-express.up.railway.app/blog/latest')
 //     .then(response => response.json())
 //     .then(blogPost => {
 //         // console.log(blogPost)
@@ -172,7 +172,7 @@ axios.get('http://localhost:3000/user/details')
 //         `
 //     })
 
-axios.get('http://localhost:3000/blog/latest')
+axios.get('https://devmastered-express.up.railway.app/blog/latest')
     .then(result => {
         let blogPost = result.data
         // console.log(blogPost)
