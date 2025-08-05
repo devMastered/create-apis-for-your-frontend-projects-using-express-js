@@ -7,8 +7,7 @@ const port = 3000
 app.use(cors({
     origin: [
         'http://127.0.0.1:5500',
-        'http://localhost:5167',
-        'https://my-app.netlify.com'
+        'http://localhost:5173',
     ]
 }))
 
