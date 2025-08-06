@@ -5,14 +5,21 @@ require('dotenv').config()
 const app = express()
 const port = 3000
 
+// app.use(cors({
+//     origin: [
+//         "http://127.0.0.1:5500",
+//         "http://localhost:5173",
+//     ]
+// }))
+
 app.use(cors({
     origin: [
-        'http://127.0.0.1:5500',
-        'http://localhost:5173',
+        process.env.CORS_VANNILA_JS_LINK,
+        process.env.CORS_REACT_LINK,
     ]
 }))
 
-console.log(process.env.TEST_VARIABLE)
+// console.log(process.env.TEST_VARIABLE)
 
 // =====================================================
 // Examples of Simple Routes
