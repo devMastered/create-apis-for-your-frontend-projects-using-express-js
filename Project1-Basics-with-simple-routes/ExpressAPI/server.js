@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+require('dotenv').config()
 
 const app = express()
 const port = 3000
@@ -10,6 +11,8 @@ app.use(cors({
         'http://localhost:5173',
     ]
 }))
+
+console.log(process.env.TEST_VARIABLE)
 
 // =====================================================
 // Examples of Simple Routes
