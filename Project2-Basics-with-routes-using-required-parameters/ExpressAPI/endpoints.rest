@@ -23,3 +23,11 @@ GET http://localhost:3001/sum/7/5
 ###
 
 GET http://localhost:3001/sum/5/7
+
+###
+
+GET http://localhost:3001/sum/8/-20
+
+###
+
+GET http://localhost:3001/sum/100/30

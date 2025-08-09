@@ -26,7 +26,11 @@ app.get('/power/:number', (req, res) => {
 app.get('/sum/:num1/:num2', (req, res) => {
     // console.log(req.params)
     // res.send('sum is called')
-    res.send(req.params)
+    // res.send(req.params)
+    let number1 = parseInt(req.params.num1)
+    let number2 = parseInt(req.params.num2)
+    let result = number1 + number2
+    res.send({ number1, number2, result })
 })
 
 app.listen(port, () => {
