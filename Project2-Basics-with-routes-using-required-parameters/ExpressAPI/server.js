@@ -14,7 +14,11 @@ app.get('/power/:number', (req, res) => {
     // console.log(req)
     // console.log(req.params)
     // console.log(req.params.number)
-    res.send('Power route is called')
+    // res.send('Power route is called')
+
+    const number = parseInt(req.params.number)
+    const result = Math.pow(number, 2)
+    res.send({ number, result })
 })
 
 app.listen(port, () => {
