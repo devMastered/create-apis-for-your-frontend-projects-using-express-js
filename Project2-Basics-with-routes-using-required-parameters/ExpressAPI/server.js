@@ -21,6 +21,14 @@ app.get('/power/:number', (req, res) => {
     res.send({ number, result })
 })
 
+// GET http://localhost:3001/sum/7/5
+// GET http://localhost:3001/sum/5/7
+app.get('/sum/:num1/:num2', (req, res) => {
+    // console.log(req.params)
+    // res.send('sum is called')
+    res.send(req.params)
+})
+
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
 })
