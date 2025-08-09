@@ -1,0 +1,17 @@
+GET http://localhost:3001/power/10
+
+###
+
+GET http://localhost:3001/power/9
+
+###
+
+GET http://localhost:3001/power/2
+
+###
+
+GET http://localhost:3001/power/25
+
+###
+
+GET http://localhost:3001/power

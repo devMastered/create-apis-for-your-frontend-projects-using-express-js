@@ -6,8 +6,12 @@ const port = 3001
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Hello!')
+// GET http://localhost:3001/power/10
+// GET http://localhost:3001/power/9
+// GET http://localhost:3001/power/2
+// GET http://localhost:3001/power/25
+app.get('/power/:number', (req, res) => {
+    res.send('Power route is called')
 })
 
 app.listen(port, () => {
