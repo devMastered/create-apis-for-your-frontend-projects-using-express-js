@@ -31,3 +31,18 @@ GET http://localhost:3001/sum/8/-20
 ###
 
 GET http://localhost:3001/sum/100/30
+
+###
+
+GET http://localhost:3001/reversed/computer
+
+###
+
+GET http://localhost:3001/reversed/express
+
+###
+
+GET http://localhost:3001/reversed/Ieva
+
+###
+

@@ -33,6 +33,17 @@ app.get('/sum/:num1/:num2', (req, res) => {
     res.send({ number1, number2, result })
 })
 
+// GET http://localhost:3001/reversed/computer
+// GET http://localhost:3001/reversed/express
+// GET http://localhost:3001/reversed/Ieva
+app.get('/reversed/:word', (req, res) => {
+    // let word = req.params.word
+    let { word } = req.params // object destructuring
+    let reversed = word.split('').reverse().join('')
+    // let letters = word.length
+    res.send({ word, reversed, letters: word.length })
+})
+
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
 })
