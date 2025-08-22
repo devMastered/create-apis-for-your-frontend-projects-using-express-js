@@ -55,3 +55,15 @@ GET http://localhost:3001/multiply/2/3
 ###
 
 GET http://localhost:3001/multiply/-9/2
+
+###
+
+GET http://localhost:3001/is-even/5
+
+###
+
+GET http://localhost:3001/is-even/7
+
+###
+
+GET http://localhost:3001/is-even/4

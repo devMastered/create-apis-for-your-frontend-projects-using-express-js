@@ -58,6 +58,21 @@ app.get('/multiply/:a/:b', (req, res) => {
     res.send({ a: firstNumber, b: secondNumber, result })
 })
 
+// GET http://localhost:3001/is-even/5
+// GET http://localhost:3001/is-even/7
+// GET http://localhost:3001/is-even/4
+app.get('/is-even/:number', (req, res) => {
+    let number = parseInt(req.params.number)
+    // let isEven = number % 2 == 0
+    // res.send({ number, isEven })
+
+    if (number % 2 == 0) {
+        return res.send({ number, isEven: true })
+    } else {
+        return res.send({ number, isEven: false })
+    }
+})
+
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
 })
