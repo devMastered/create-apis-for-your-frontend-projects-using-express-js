@@ -204,11 +204,17 @@ app.get('/palindrome/:word', (req, res) => {
     let reversed = word.split('').reverse().join('')
     // res.send({ word, reversed })
 
-    if (word == reversed) {
-        res.send({ word, reversed, isPalindrome: true })
-    } else {
-        res.send({ word, reversed, isPalindrome: false })
-    }
+    // if (word == reversed) {
+    //     res.send({ word, reversed, isPalindrome: true })
+    // } else {
+    //     res.send({ word, reversed, isPalindrome: false })
+    // }
+
+    res.send({
+        word,
+        reversed,
+        isPalindrome: word == reversed
+    })
 })
 
 
