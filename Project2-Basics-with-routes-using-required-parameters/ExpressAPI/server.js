@@ -92,10 +92,19 @@ app.get('/fullname/:name/:surname', (req, res) => {
 // Tasks
 // ========================================================
 
+// Task 1:
+// Create a route '/average/:num1/:num2/:num3' which accepts
+// three numbers as parameters and returns their average.
 
-
-
-
+app.get('/average/:num1/:num2/:num3', (req, res) => {
+    let number1 = parseFloat(req.params.num1)
+    let number2 = parseFloat(req.params.num2)
+    let number3 = parseFloat(req.params.num3)
+    // let result = (number1 + number2 + number3) / 3
+    // let result = ((number1 + number2 + number3) / 3).toFixed(2)
+    let result = parseFloat(((number1 + number2 + number3) / 3).toFixed(2))
+    res.send({ number1, number2, number3, result })
+})
 
 // ========================================================
 

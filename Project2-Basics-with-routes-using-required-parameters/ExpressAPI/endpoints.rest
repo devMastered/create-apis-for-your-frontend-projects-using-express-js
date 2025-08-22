@@ -75,3 +75,11 @@ GET http://localhost:3001/fullname/Ieva/Jaksaityte
 ###
 
 GET http://localhost:3001/fullname/John/Smith
+
+###
+
+GET http://localhost:3001/average/8/5/6
+
+###
+
+GET http://localhost:3001/average/8/8/9
