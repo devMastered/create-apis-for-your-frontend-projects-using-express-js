@@ -6,6 +6,10 @@ const port = 3001
 
 app.use(cors())
 
+// ========================================================
+// Examples of Routes with Required Parameters
+// ========================================================
+
 // GET http://localhost:3001/power/10
 // GET http://localhost:3001/power/9
 // GET http://localhost:3001/power/2
@@ -83,6 +87,17 @@ app.get('/fullname/:name/:surname', (req, res) => {
     let fullName = `${name} ${surname}`
     res.send({ name, surname, fullName })
 })
+
+// ========================================================
+// Tasks
+// ========================================================
+
+
+
+
+
+
+// ========================================================
 
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
