@@ -123,3 +123,12 @@ GET http://localhost:3001/compare/9/3
 ###
 
 GET http://localhost:3001/compare/5/5
+
+###
+
+GET http://localhost:3001/initials/John/Doe
+
+###
+
+GET http://localhost:3001/initials/john/smith
+

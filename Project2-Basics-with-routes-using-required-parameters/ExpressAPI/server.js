@@ -171,6 +171,19 @@ app.get('/compare/:a/:b', (req, res) => {
     res.send(finalResult)
 })
 
+// Task 6:
+// Create a route '/initials/:name/:surname' which returns the
+// initials of a name, like "J.D." for John Doe.
+
+app.get('/initials/:name/:surname', (req, res) => {
+    let { name, surname } = req.params
+    res.send({
+        name,
+        surname,
+        initials: `${name[0]}.${surname[0]}.`.toUpperCase()
+    })
+})
+
 
 
 // ========================================================
