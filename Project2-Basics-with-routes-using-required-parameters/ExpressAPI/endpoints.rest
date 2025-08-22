@@ -46,3 +46,12 @@ GET http://localhost:3001/reversed/Ieva
 
 ###
 
+GET http://localhost:3001/multiply/7/8
+
+###
+
+GET http://localhost:3001/multiply/2/3
+
+###
+
+GET http://localhost:3001/multiply/-9/2

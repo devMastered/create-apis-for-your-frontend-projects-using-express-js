@@ -44,6 +44,20 @@ app.get('/reversed/:word', (req, res) => {
     res.send({ word, reversed, letters: word.length })
 })
 
+// GET http://localhost:3001/multiply/7/8
+// GET http://localhost:3001/multiply/2/3
+// GET http://localhost:3001/multiply/-9/2
+app.get('/multiply/:a/:b', (req, res) => {
+    // console.log(req.params)
+    // res.send('ok')
+
+    let firstNumber = parseFloat(req.params.a)
+    let secondNumber = parseFloat(req.params.b)
+    let result = firstNumber * secondNumber
+    // res.send({ firstNumber, secondNumber, result })
+    res.send({ a: firstNumber, b: secondNumber, result })
+})
+
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
 })
