@@ -129,6 +129,20 @@ app.get('/word-repeat/:word/:count', (req, res) => {
     res.send({ word, count, result })
 })
 
+// Task 4:
+// Create a route '/word-info/:word' which returns the word in
+// uppercase, lowercase, and its length.
+
+app.get('/word-info/:word', (req, res) => {
+    let { word } = req.params
+    res.send({
+        originalWord: word,
+        upperCase: word.toUpperCase(),
+        lowerCase: word.toLowerCase(),
+        length: word.length
+    })
+})
+
 
 
 // ========================================================

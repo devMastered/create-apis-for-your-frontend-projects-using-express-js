@@ -99,3 +99,15 @@ GET http://localhost:3001/word-repeat/computer/2
 ###
 
 GET http://localhost:3001/word-repeat/ha/5
+
+###
+
+GET http://localhost:3001/word-info/computer
+
+###
+
+GET http://localhost:3001/word-info/Chair
+
+###
+
+GET http://localhost:3001/word-info/biRD
