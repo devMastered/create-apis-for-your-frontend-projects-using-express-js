@@ -143,6 +143,34 @@ app.get('/word-info/:word', (req, res) => {
     })
 })
 
+// Task 5:
+// Create a route '/compare/:a/:b' which returns which number
+// is larger, or if they are equal.
+
+app.get('/compare/:a/:b', (req, res) => {
+    let a = parseInt(req.params.a)
+    let b = parseInt(req.params.b)
+    // res.send({ a, b })
+
+    let finalResult = {
+        firstNumber: a,
+        secondNumber: b
+    }
+
+    if (a > b) {
+        finalResult.largerNumber = a
+        finalResult.message = 'First number is larger'
+    } else if (b > a) {
+        finalResult.largerNumber = b
+        finalResult.message = 'Second number is larger'
+    } else {
+        finalResult.largerNumber = a
+        finalResult.message = 'Numbers are equal'
+    }
+
+    res.send(finalResult)
+})
+
 
 
 // ========================================================
