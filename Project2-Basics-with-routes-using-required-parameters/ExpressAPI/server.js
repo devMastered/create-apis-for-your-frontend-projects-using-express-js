@@ -184,6 +184,18 @@ app.get('/initials/:name/:surname', (req, res) => {
     })
 })
 
+// Task 7:
+// Create a route '/triangle-area/:base/:height' which
+// returns the area of a triangle.
+
+app.get('/triangle-area/:base/:height', (req, res) => {
+    let base = parseFloat(req.params.base)
+    let height = parseFloat(req.params.height)
+    let area = 0.5 * base * height
+    res.send({ base, height, area })
+})
+
+
 
 
 // ========================================================

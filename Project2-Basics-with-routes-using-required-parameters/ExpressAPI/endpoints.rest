@@ -132,3 +132,10 @@ GET http://localhost:3001/initials/John/Doe
 
 GET http://localhost:3001/initials/john/smith
 
+###
+
+GET http://localhost:3001/triangle-area/2/3
+
+###
+
+GET http://localhost:3001/triangle-area/1.2/2.8
