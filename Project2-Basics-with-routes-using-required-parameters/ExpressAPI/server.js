@@ -195,6 +195,21 @@ app.get('/triangle-area/:base/:height', (req, res) => {
     res.send({ base, height, area })
 })
 
+// Task 8:
+// Create a route '/palindrome/:word' which returns true if
+// the word is a palindrome (e.g., "level").
+
+app.get('/palindrome/:word', (req, res) => {
+    let { word } = req.params
+    let reversed = word.split('').reverse().join('')
+    // res.send({ word, reversed })
+
+    if (word == reversed) {
+        res.send({ word, reversed, isPalindrome: true })
+    } else {
+        res.send({ word, reversed, isPalindrome: false })
+    }
+})
 
 
 

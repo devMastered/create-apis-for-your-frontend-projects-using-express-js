@@ -139,3 +139,11 @@ GET http://localhost:3001/triangle-area/2/3
 ###
 
 GET http://localhost:3001/triangle-area/1.2/2.8
+
+###
+
+GET http://localhost:3001/palindrome/computer
+
+###
+
+GET http://localhost:3001/palindrome/level
