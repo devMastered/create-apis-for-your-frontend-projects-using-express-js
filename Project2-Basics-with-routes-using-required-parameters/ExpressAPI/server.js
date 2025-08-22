@@ -117,6 +117,18 @@ app.get('/first-last/:input', (req, res) => {
     res.send({ data, firstLetter: first, lastLetter: last })
 })
 
+// Task 3:
+// Create a route '/word-repeat/:word/:count' which accepts a
+// word and a count, and returns the word repeated that many times.
+
+app.get('/word-repeat/:word/:count', (req, res) => {
+    let word = req.params.word
+    let count = parseInt(req.params.count)
+    let result = word.repeat(count)
+    // let result = req.params.word.repeat(parseInt(req.params.count))
+    res.send({ word, count, result })
+})
+
 
 
 // ========================================================

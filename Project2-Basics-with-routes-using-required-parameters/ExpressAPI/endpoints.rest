@@ -91,3 +91,11 @@ GET http://localhost:3001/first-last/computer
 ###
 
 GET http://localhost:3001/first-last/express
+
+###
+
+GET http://localhost:3001/word-repeat/computer/2
+
+###
+
+GET http://localhost:3001/word-repeat/ha/5
