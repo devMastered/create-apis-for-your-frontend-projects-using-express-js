@@ -67,3 +67,11 @@ GET http://localhost:3001/is-even/7
 ###
 
 GET http://localhost:3001/is-even/4
+
+###
+
+GET http://localhost:3001/fullname/Ieva/Jaksaityte
+
+###
+
+GET http://localhost:3001/fullname/John/Smith

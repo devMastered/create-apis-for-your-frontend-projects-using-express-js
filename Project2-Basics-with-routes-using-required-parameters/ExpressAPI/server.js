@@ -73,6 +73,17 @@ app.get('/is-even/:number', (req, res) => {
     }
 })
 
+// GET http://localhost:3001/fullname/Ieva/Jaksaityte
+// GET http://localhost:3001/fullname/John/Smith
+app.get('/fullname/:name/:surname', (req, res) => {
+    // let name = req.params.name
+    // let surname = req.params.surname
+    let { name, surname } = req.params
+    // let fullName = name + ' ' + surname
+    let fullName = `${name} ${surname}`
+    res.send({ name, surname, fullName })
+})
+
 app.listen(port, () => {
     console.log(`Project 2 running on http://localhost:${port}`)
 })
