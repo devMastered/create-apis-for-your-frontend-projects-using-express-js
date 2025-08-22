@@ -106,6 +106,19 @@ app.get('/average/:num1/:num2/:num3', (req, res) => {
     res.send({ number1, number2, number3, result })
 })
 
+// Task 2:
+// Create a route '/first-last/:input' which accepts a string
+// and returns the first and last letters of that string.
+
+app.get('/first-last/:input', (req, res) => {
+    let data = req.params.input
+    let first = data[0]
+    let last = data[data.length - 1]
+    res.send({ data, firstLetter: first, lastLetter: last })
+})
+
+
+
 // ========================================================
 
 app.listen(port, () => {
