@@ -147,3 +147,11 @@ GET http://localhost:3001/palindrome/computer
 ###
 
 GET http://localhost:3001/palindrome/level
+
+###
+
+GET http://localhost:3001/to-celsius/80
+
+###
+
+GET http://localhost:3001/to-celsius/55.3

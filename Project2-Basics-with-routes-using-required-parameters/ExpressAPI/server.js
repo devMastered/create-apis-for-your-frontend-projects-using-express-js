@@ -217,7 +217,16 @@ app.get('/palindrome/:word', (req, res) => {
     })
 })
 
+// Task 9:
+// Create a route '/to-celsius/:fahrenheit' which converts
+// Fahrenheit to Celsius and returns the result.
 
+app.get('/to-celsius/:fahrenheit', (req, res) => {
+    let fahrenheit = parseFloat(req.params.fahrenheit)
+    // let celcius = (fahrenheit - 32) * 5 / 9
+    let celcius = parseFloat(((fahrenheit - 32) * 5 / 9).toFixed(2))
+    res.send({ fahrenheit, celcius })
+})
 
 // ========================================================
 
