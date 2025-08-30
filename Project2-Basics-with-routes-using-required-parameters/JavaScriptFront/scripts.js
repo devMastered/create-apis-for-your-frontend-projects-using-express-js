@@ -141,3 +141,30 @@ multiplyBlock.querySelector('.update').addEventListener('submit', (e) => {
         .catch(error => console.log('Error:', error))
 })
 
+// ========================================================
+// EXAMPLE - IS NUMBER EVEN
+// ========================================================
+
+const isEvenNumberBlock = document.querySelector('.example-is-even')
+
+isEvenNumberBlock.querySelector('.update').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    let numberInput = isEvenNumberBlock.querySelector('input#evenNumber')
+
+    if (!numberInput.value) {
+        alert('Please enter a number!')
+        return
+    }
+
+    axios.get(`http://localhost:3001/is-even/${numberInput.value}`)
+        .then(response => {
+            // console.log(response)
+            isEvenNumberBlock.querySelector('.content').innerHTML = `
+                <h3>Number: ${response.data.number}</h3>
+                <p>Is even: ${ response.data.isEven ? 'yes' : 'no' }</p>
+            `
+            numberInput.value = ''
+        })
+        .catch(error => console.log('Error:', error))
+})
