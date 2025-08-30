@@ -16,13 +16,24 @@ powerBlock.querySelector('.update').addEventListener('submit', (e) => {
         return
     }
 
-    fetch(`http://localhost:3001/power/${numberInput.value}`)
-        .then(response => response.json())
-        .then(data => {
-            // console.log(data)
+    // fetch(`http://localhost:3001/power/${numberInput.value}`)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         // console.log(data)
+    //         powerBlock.querySelector('.content').innerHTML = `
+    //                 <h3>Number is: ${data.number}</h3>
+    //                 <p>It's power: ${data.result}</p>
+    //             `
+    //         numberInput.value = ''
+    //     })
+    //     .catch(error => console.log('Error:', error))
+
+    axios.get(`http://localhost:3001/power/${numberInput.value}`)
+        .then(response => {
+            // console.log(response)
             powerBlock.querySelector('.content').innerHTML = `
-                    <h3>Number is: ${data.number}</h3>
-                    <p>It's power: ${data.result}</p>
+                    <h3>Number is: ${response.data.number}</h3>
+                    <p>It's power: ${response.data.result}</p>
                 `
             numberInput.value = ''
         })
