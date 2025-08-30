@@ -1,4 +1,5 @@
 import { useRef, useState } from "react"
+import axios from 'axios'
 
 const SumOfTwoNumbers = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -23,12 +24,25 @@ const SumOfTwoNumbers = () => {
 
         setIsLoading(true)
 
-        fetch(`http://localhost:3001/sum/${number1}/${number2}`)
-            .then(response => response.json())
+        // fetch(`http://localhost:3001/sum/${number1}/${number2}`)
+        //     .then(response => response.json())
+        //     .then(res => {
+        //         // console.log(res)
+        //         setIsLoading(false)
+        //         setData(res)
+        //         firstInputRef.current.value = ''
+        //         secondInputRef.current.value = ''
+        //     })
+        //     .catch(error => {
+        //         console.log('Error:', error)
+        //         setIsLoading(false)
+        //     })
+
+        axios.get(`http://localhost:3001/sum/${number1}/${number2}`)
             .then(res => {
                 // console.log(res)
                 setIsLoading(false)
-                setData(res)
+                setData(res.data)
                 firstInputRef.current.value = ''
                 secondInputRef.current.value = ''
             })
