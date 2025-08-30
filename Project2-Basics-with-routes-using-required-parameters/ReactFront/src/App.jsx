@@ -1,4 +1,5 @@
 import './App.css'
+import PowerOfNumber from './components/PowerOfNumber'
 
 function App() {
     return (
@@ -8,6 +9,8 @@ function App() {
                     <h2>Routes with Required Parameters</h2>
                 </div>
             </div>
+
+            <PowerOfNumber />
         </>
     )
 }
