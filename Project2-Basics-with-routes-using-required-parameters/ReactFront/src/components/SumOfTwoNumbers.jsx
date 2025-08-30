@@ -1,6 +1,9 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const SumOfTwoNumbers = () => {
+    const [isLoading, setIsLoading] = useState(false)
+    const [data, setData] = useState(undefined)
+
     const firstInputRef = useRef()
     const secondInputRef = useRef()
 
@@ -13,19 +16,44 @@ const SumOfTwoNumbers = () => {
         let number2 = secondInputRef.current.value
         // console.log({ number1, number2 })
 
+        if (!number1 || !number2) {
+            alert('Please enter both numbers!')
+            return
+        }
+
+        setIsLoading(true)
+
         fetch(`http://localhost:3001/sum/${number1}/${number2}`)
             .then(response => response.json())
-            .then(data => {
-                console.log(data)
+            .then(res => {
+                // console.log(res)
+                setIsLoading(false)
+                setData(res)
+                firstInputRef.current.value = ''
+                secondInputRef.current.value = ''
             })
-            .catch(error => console.log('Error:', error))
+            .catch(error => {
+                console.log('Error:', error)
+                setIsLoading(false)
+            })
     }
 
     return (
         <div className="block">
             <p className="block-title">GET /sum/:num1/:num2</p>
             <div className="content">
-                <p>Please enter two numbers to get their sum.</p>
+                {
+                    !data &&
+                    <p>Please enter two numbers to get their sum.</p>
+                }
+                {
+                    isLoading &&
+                    <p>Please wait, it is loading...</p>
+                }
+                {
+                    data && !isLoading &&
+                    <h3>Sum of {data.number1} and {data.number2} is: {data.result}</h3>
+                }
             </div>
             <form onSubmit={formSubmitHandler} className="update">
                 <input type="number" ref={firstInputRef} placeholder="Enter first number" />
