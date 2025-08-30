@@ -168,3 +168,35 @@ isEvenNumberBlock.querySelector('.update').addEventListener('submit', (e) => {
         })
         .catch(error => console.log('Error:', error))
 })
+
+// ========================================================
+// EXAMPLE - FULLNAME
+// ========================================================
+
+let fullNameBlock = document.querySelector('.example-fullname')
+
+fullNameBlock.querySelector('.update').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    let nameInput = fullNameBlock.querySelector('input#nameInput')
+    let surnameInput = fullNameBlock.querySelector('input#surnameInput')
+
+    if (!nameInput.value || !surnameInput.value) {
+        alert('Please enter both name and surname!')
+        return
+    }
+
+    axios.get(`http://localhost:3001/fullname/${nameInput.value}/${surnameInput.value}`)
+        .then(response => {
+            // console.log(response.data)
+            let user = response.data
+            // console.log(user)
+
+            fullNameBlock.querySelector('.content').innerHTML = `
+                <h3>Full name: ${user.fullName}</h3>
+            `
+            nameInput.value = ''
+            surnameInput.value = ''
+        })
+        .catch(error => console.log('Error:', error))
+})
