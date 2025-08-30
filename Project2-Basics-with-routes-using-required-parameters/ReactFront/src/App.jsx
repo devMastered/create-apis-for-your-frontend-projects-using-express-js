@@ -1,5 +1,6 @@
 import './App.css'
 import PowerOfNumber from './components/PowerOfNumber'
+import SumOfTwoNumbers from './components/SumOfTwoNumbers'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             </div>
 
             <PowerOfNumber />
+            <SumOfTwoNumbers />
         </>
     )
 }
