@@ -112,3 +112,32 @@ textBlock.querySelector('.update').addEventListener('submit', (e) => {
         .catch(error => console.log('Error:', error))
 })
 
+// ========================================================
+// EXAMPLE - MULTIPLY TWO NUMBERS
+// ========================================================
+
+const multiplyBlock = document.querySelector('.example-multiply')
+
+multiplyBlock.querySelector('.update').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    let num1Input = multiplyBlock.querySelector('input#multiplyNumber1')
+    let num2Input = multiplyBlock.querySelector('input#multiplyNumber2')
+
+    if (!num1Input.value || !num2Input.value) {
+        alert('Please enter both numbers!')
+        return
+    }
+
+    axios.get(`http://localhost:3001/multiply/${num1Input.value}/${num2Input.value}`)
+        .then(({ data }) => {
+            // console.log(data)
+            multiplyBlock.querySelector('.content').innerHTML = `
+                <h3>Multiplication of ${data.a} and ${data.b} is: ${data.result}</h3>
+            `
+            num1Input.value = ''
+            num2Input.value = ''
+        })
+        .catch(error => console.log('Error:', error))
+})
+
