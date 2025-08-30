@@ -83,3 +83,32 @@ sumBlock.querySelector('.update').addEventListener('submit', (e) => {
         .catch(error => console.log('Error:', error))
 })
 
+// ========================================================
+// EXAMPLE - REVERSED WORD
+// ========================================================
+
+const textBlock = document.querySelector('.example-reversed')
+
+textBlock.querySelector('.update').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    let wordInput = textBlock.querySelector('input#wordInput')
+
+    if (!wordInput.value) {
+        alert('Please enter a word!')
+        return
+    }
+
+    axios.get(`http://localhost:3001/reversed/${wordInput.value}`)
+        .then(({ data }) => {
+            // console.log(data)
+            textBlock.querySelector('.content').innerHTML = `
+                <h3>Original word: ${data.word}</h3>
+                <p>Reversed word: ${data.reversed}</p>
+                <p>Number of letters: ${data.letters}</p>
+            `
+            wordInput.value = ''
+        })
+        .catch(error => console.log('Error:', error))
+})
+
